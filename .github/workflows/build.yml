@@ -1,0 +1,16 @@
+name: CI/CD Masterclass
+run-name: ${{ github.actor }} is running the pipeline
+on: [push]
+jobs: 
+    Test-Workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Starting Pipeline"
+            - name: Check out repository code
+              uses: actions/checkout@v6
+            - name: Install Node
+              uses: actions/setup-node@latest
+            - name: Install SlideDev
+              run: npm install slidev
+            - name: Builds Slidedeck
+              run: npm run dev
