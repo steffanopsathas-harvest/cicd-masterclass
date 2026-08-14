@@ -19,7 +19,7 @@ jobs:
             - uses: DavidAnson/markdownlint-cli2-action@v24
               with:
                 globs: slides.md
-                config: markdownlint-config.json
+                # config: markdownlint-config.json
 
     build:
         needs: markdown-lint
