@@ -17,6 +17,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 20
             - name: Cache node modules
               id: cache-npm
               uses: actions/cache@v4
@@ -33,9 +36,6 @@ jobs:
               name: List the state of node modules
               continue-on-error: true
               run: npm list            
-            - uses: actions/setup-node@v4
-              with:
-                node-version: 20
             - run: npm install 
             - run: npm run build -- --base /${{ github.event.repository.name}}/ 
             - uses: actions/upload-pages-artifact@v5
