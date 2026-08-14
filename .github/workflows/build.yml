@@ -16,11 +16,12 @@ jobs:
     markdown-lint:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v6
             - uses: DavidAnson/markdownlint-cli2-action@v24
               with:
                 globs: '**/*.md'
                 # config: markdownlint-config.json
-                continue-on-error: true
+              continue-on-error: true
 
     build:
         needs: markdown-lint
