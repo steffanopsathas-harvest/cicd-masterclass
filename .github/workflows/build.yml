@@ -10,5 +10,7 @@ jobs:
               uses: actions/checkout@v6
             - name: Install Node
               uses: actions/setup-node@v4
+            - name: Install dependencies
+              run: npm install
             - name: Builds Slidedeck
-              run: npm run dev
+              run: npm build
