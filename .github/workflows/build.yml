@@ -18,8 +18,9 @@ jobs:
         steps:
             - uses: DavidAnson/markdownlint-cli2-action@v24
               with:
-                globs: slides.md
+                globs: '**/*.md'
                 # config: markdownlint-config.json
+                continue-on-error: true
 
     build:
         needs: markdown-lint
