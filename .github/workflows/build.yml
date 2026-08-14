@@ -25,7 +25,7 @@ jobs:
         needs: build
 
         permissions:
-            pages: write
+            pages: write 
             id-token: write
             contents: read
 
