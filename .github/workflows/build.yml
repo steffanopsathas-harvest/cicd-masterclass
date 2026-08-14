@@ -12,5 +12,5 @@ jobs:
               uses: actions/setup-node@v4
             - name: Install dependencies
               run: npm install
-            - name: Builds Slidedeck
-              run: npm build
+            - name: Build Slidedeck
+              run: npm run build
