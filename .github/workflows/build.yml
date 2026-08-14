@@ -13,7 +13,16 @@ on:
             required: true
 
 jobs: 
+    markdown-lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: DavidAnson/markdownlint-cli2-action@v24
+              with:
+                globs: slides.md
+                config: markdownlint-config.json
+
     build:
+        needs: markdown-lint
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
