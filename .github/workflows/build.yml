@@ -9,7 +9,7 @@ jobs:
             - name: Check out repository code
               uses: actions/checkout@v6
             - name: Install Node
-              uses: actions/setup-node@latest
+              uses: actions/setup-node@v4
             - name: Install SlideDev
               run: npm install slidev
             - name: Builds Slidedeck
