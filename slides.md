@@ -55,6 +55,12 @@ transition: fade-out
 transition: fade-out
 ---
 
+# Workflow Triggers & Structure
+
+---
+transition: fade-out
+---
+
 # What is Slidev?
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
