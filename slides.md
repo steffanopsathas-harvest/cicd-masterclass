@@ -9,7 +9,7 @@ title: Masterclass CI/CD
 info: |
 # apply UnoCSS classes to the current slide
 class: text-center
-# https://sli.dev/features/drawing
+# https://sli.dev/features/drawing   
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
